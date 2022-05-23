@@ -88,7 +88,7 @@ export class GrowthBook {
   }
 
   public getAttributes() {
-    return { ...this.context.attributes, ...this._attributeOverrides };
+    return Object.assign({}, this.context.attributes, this._attributeOverrides);
   }
 
   public getFeatures() {
